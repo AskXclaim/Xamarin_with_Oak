@@ -1,12 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace LetsBegin.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Navigation : ContentPage
+    public partial class MyTabbedPage:TabbedPage
     {
-        public Navigation()
+        public MyTabbedPage()
         {
             InitializeComponent();
         }
