@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <ProduceReferenceAssemblyInOutDir>true</ProduceReferenceAssemblyInOutDir>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2622" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\" />
+    <None Remove="Views\HomePages\" />
+    <None Remove="Views\NavigationPages\" />
+    <None Remove="Views\ContactUsPages\" />
+    <None Remove="Shared\" />
+    <None Remove="Views\ServicePages\" />
+    <None Remove="Views\FlyoutPages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="Views\HomePages\" />
+    <Folder Include="Views\NavigationPages\" />
+    <Folder Include="Views\ContactUsPages\" />
+    <Folder Include="Shared\" />
+    <Folder Include="Views\ServicePages\" />
+    <Folder Include="Views\FlyoutPages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\Home\XamlHomePage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\Home\CodeOnlyHomePage.cs" />
+    <Compile Remove="Views\Home\XamlHomePage.xaml.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinWithVs.Views.ServicePages.SoftwareDevPage"
+    Title="Software-Development">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Software Development Service"
+                   HorizontalOptions="Center" VerticalOptions="Center"
+                   FontSize="25" FontAttributes="Bold" TextColor="DarkBlue"
+                   Margin="1,10"/>
+            <Label Text="Let's help you build out your dreams!"
+                   HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+                   FontSize="20" FontAttributes="Italic" TextColor="DarkBlue"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinWithVs.Views.HomePages.XamlHomePage"
+    Title="Xaml-Home">
+    <ContentPage.Content>
+        <Frame BackgroundColor="AntiqueWhite" CornerRadius="20"
+               IsClippedToBounds="True">
+            <StackLayout Padding="5,10">
+                <Label Text="Welcome to Lyseis Xaml Home page!" TextColor="Navy"
+                      FontSize="25" HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>
+

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinWithVs.Views.ContactUsPages.XamlContactUsPage"
+             Title="Xaml-Contact-us">
+  <!--Pages can be added as references or inline-->
+  <ContentPage Title="Address" IconImageSource="locationIcon.png">
+        <ContentPage.Content>
+            <StackLayout>
+                <Label HorizontalOptions="Center" VerticalOptions="Center"
+                       FontAttributes="Bold" FontSize="15" Margin="1,10">
+                    Here's our address:112 some address
+                </Label>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+  <ContentPage Title="Email\Phone" IconImageSource="emailPhoneIcon.png">
+        <ContentPage.Content>
+            <StackLayout>
+                <Label HorizontalOptions="Center" VerticalOptions="Center"
+                       FontAttributes="Bold" FontSize="15" Margin="1,10">
+                    Email:someemail@lyseis.com
+                </Label>
+                 <Label HorizontalOptions="Center" VerticalOptions="Center"
+                       FontAttributes="Bold" FontSize="15" Margin="1,3">
+                    Phone:012345678
+                </Label>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+  <ContentPage Title="Feed Back" IconImageSource="feedBackIcon.png">
+         <ContentPage.Content>
+            <StackLayout>
+                <Label HorizontalOptions="Center" VerticalOptions="Center"
+                       FontAttributes="Bold" FontSize="15" Margin="1,10">
+                    We would like to hear what you think
+                </Label>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+</TabbedPage>

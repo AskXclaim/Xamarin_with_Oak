@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinWithVs.Views.NavigationPages.XamlNavigationPage"
+    Title="Xaml-Nav">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Home" IconImageSource="homeIcon.png" Order="Default"/>
+        <ToolbarItem Text="Services" IconImageSource="servicesIcon.png" Order="Secondary"/>
+        <ToolbarItem Text="Contact Us" IconImageSource="locationIcon.png" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Frame IsClippedToBounds="True" CornerRadius="30">
+            <StackLayout>
+                <Label Text="Xaml based Lyseis Navigation page!" TextColor="Black"
+                       FontSize="20" FontAttributes="Bold"
+                       HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>
+
