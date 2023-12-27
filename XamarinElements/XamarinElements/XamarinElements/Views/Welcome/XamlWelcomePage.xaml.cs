@@ -11,6 +11,14 @@ namespace XamarinElements.Views.Welcome
 		{
 			InitializeComponent ();
 		}
-	}
+
+        void btnSoftwareDev_Clicked(System.Object sender, System.EventArgs e)
+        {
+        }
+
+        void btnCyberSecurity_Clicked(System.Object sender, System.EventArgs e)
+        {
+        }
+    }
 }
 

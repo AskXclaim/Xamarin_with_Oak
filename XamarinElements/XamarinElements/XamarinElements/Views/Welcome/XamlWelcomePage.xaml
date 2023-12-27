@@ -20,6 +20,14 @@
                        LineHeight="1.2" Padding="10">
                         Please take a look around, we are happy to be of service.
                     </Label>
+                    <Button x:Name="btnSoftwareDev"
+                        CornerRadius="50" BackgroundColor="#084C61"
+                            TextColor="#ffffff" Text="Software Development"
+                            Clicked="btnSoftwareDev_Clicked"/>
+                    <Button x:Name="btnCyberSecurity"
+                        CornerRadius="50" BackgroundColor="#DB3A34"
+                            TextColor="#ffffff" Text="Cyber Security"
+                            Clicked="btnCyberSecurity_Clicked"/>
 
                 </StackLayout>
 
