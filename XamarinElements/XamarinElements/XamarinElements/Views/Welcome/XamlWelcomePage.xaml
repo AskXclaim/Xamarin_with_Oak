@@ -2,7 +2,17 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="XamarinElements.Views.Welcome.XamlWelcomePage">
+    x:Class="XamarinElements.Views.Welcome.XamlWelcomePage"
+    Title="Lyseis...">
+    <ContentPage.ToolbarItems>
+       <ToolbarItem x:Name="welcomeToolbarItem" Text="Welcome" Order="Default"
+                    IconImageSource="softwareDev_home_icon.png" Clicked="welcomeToolbarItem_Clicked"/>
+        <ToolbarItem x:Name="softwareDevToolbarItem" Text="Softare Development"
+                     Order="Secondary" IconImageSource="" Clicked="softwareDevToolbarItem_Clicked"/>
+        <ToolbarItem x:Name="cyberSecurityToolbarItem" Text="Cyber Security" Order="Secondary"
+                     IconImageSource="cyber_security_icon.png" Clicked="cyberSecurityToolbarItem_Clicked"/>
+        <ToolbarItem x:Name="contactUsToolbarItem" Text="Contact Us" Order="Secondary" Clicked="contactUsToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <Frame CornerRadius="0" Padding="0">
             <StackLayout>

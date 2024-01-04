@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinElements.Views.CyberSecurity.XamlCyberSecurityPage"
+    Title="CyberSecurity" IconImageSource="cyber_security_icon.png">
+    <ContentPage.Content>
+        <StackLayout Margin="0,10,0,0">
+            <Frame HorizontalOptions="Fill" VerticalOptions="StartAndExpand"
+                   BackgroundColor="#DB3A34">
+                <Label HorizontalTextAlignment="Center"
+                       FontSize="25"
+                       TextColor="#ffffff">
+                    Cyber Security services
+                </Label>
+            </Frame>
+            <Button x:Name="btnCyberSecurityBack" Text="Back" BackgroundColor="#ffffff"
+                    VerticalOptions="Start" ImageSource=""
+                    TextColor="#000000" Clicked="btnCyberSecurityBack_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

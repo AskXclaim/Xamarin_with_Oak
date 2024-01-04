@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinElements.Views.SoftwareDevelopment.XamlCsharpPage"
+    Title="CSharp" IconImageSource="softwareDev_chsarp_icon.png">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="0,10,0,0">
+                <Frame HorizontalOptions="Fill" VerticalOptions="Center"
+                   BackgroundColor="#177E89">
+                    <Label HorizontalTextAlignment="Center"
+                       FontSize="25"
+                       TextColor="#ffffff">
+                        C-sharp services
+                    </Label>
+                </Frame>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Fill" VerticalOptions="CenterAndExpand">
+                <Label>Middle content</Label>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Fill" VerticalOptions="End"
+                         BackgroundColor="#177E89">
+
+                <Button x:Name="btnCsharpBack"  FontSize="15" Text="Go back" TextColor="#000000"
+                        CornerRadius="10" Clicked="btnCsharpBack_Clicked"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

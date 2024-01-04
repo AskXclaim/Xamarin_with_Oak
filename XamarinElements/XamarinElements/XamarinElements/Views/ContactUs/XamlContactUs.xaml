@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinElements.Views.ContactUs.XamlContactUs"
+    Title="Contact Us">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+            <Frame CornerRadius="10" Padding="0" IsClippedToBounds="True">
+                <StackLayout BackgroundColor="#177E89">
+                    <Label Text="Contact Us" FontSize="20" Padding="10"
+                           HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+                           TextColor="#ffffff"/>
+                </StackLayout>
+            </Frame>
+            <StackLayout>
+                <Entry x:Name="contactUsEmail" Placeholder="Email..." FontSize="Body"
+                       BackgroundColor="WhiteSmoke" Margin="10" TextColor="#000000" Keyboard="Email"
+                       TextTransform="Uppercase"/>
+                <Editor x:Name="contactUsMessage" Placeholder="Message..." FontSize="Body"
+                        BackgroundColor="WhiteSmoke" Margin="10,5,10,2" Keyboard="Text"
+                        HeightRequest="150" MaxLength="150" IsSpellCheckEnabled="True" CharacterSpacing="1.5"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="End" VerticalOptions="Center">
+                <Button x:Name="btnContactUs" Text="Send" FontSize="Large"
+                        Padding="2" Margin="5,1,5,5" CornerRadius="20"
+                        BackgroundColor="#177E89" TextColor="#ffffff"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

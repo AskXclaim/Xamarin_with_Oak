@@ -20,11 +20,15 @@
     <None Remove="Views\Welcome\" />
     <None Remove="Views\SoftwareDevelopment\" />
     <None Remove="Views\CyberSecurity\" />
+    <None Remove="Shared\" />
+    <None Remove="Views\ContactUs\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Views\Welcome\" />
     <Folder Include="Views\SoftwareDevelopment\" />
     <Folder Include="Views\CyberSecurity\" />
+    <Folder Include="Shared\" />
+    <Folder Include="Views\ContactUs\" />
   </ItemGroup>
 </Project>
