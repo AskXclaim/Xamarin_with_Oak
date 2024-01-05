@@ -17,14 +17,120 @@
                 <Entry x:Name="contactUsEmail" Placeholder="Email..." FontSize="Body"
                        BackgroundColor="WhiteSmoke" Margin="10" TextColor="#000000" Keyboard="Email"
                        TextTransform="Uppercase"/>
-                <Editor x:Name="contactUsMessage" Placeholder="Message..." FontSize="Body"
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Margin="10,1,1,1"
+                           VerticalOptions="Center"
+                             Text="Increase email fontsize:"/>
+                    <Stepper x:Name="contactUsEmailFontSizer" Maximum="20" Minimum="10"
+                              Value="14" VerticalOptions="Center"
+                             Grid.Row="0" Grid.Column="1" FlowDirection="LeftToRight"
+                             ValueChanged="contactUsEmailFontSizer_ValueChanged"/>
+                </Grid>
+                <Editor x:Name="contactUsMessage" Placeholder="Message..." FontSize="{Binding Value}"
                         BackgroundColor="WhiteSmoke" Margin="10,5,10,2" Keyboard="Text"
-                        HeightRequest="150" MaxLength="150" IsSpellCheckEnabled="True" CharacterSpacing="1.5"/>
+                        HeightRequest="150" MaxLength="150" IsSpellCheckEnabled="True"
+                        CharacterSpacing="1.5" BindingContext="{x:Reference contactUsMsgFontSizer}"
+                        TextChanged="contactUsMessage_TextChanged"/>
+                <Grid RowSpacing="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Margin="10,1,1,1" Text="Increase message fontsize:"/>
+                    <Slider x:Name="contactUsMsgFontSizer" Grid.Row="0" Grid.Column="1" 
+                           HorizontalOptions="FillAndExpand" Maximum="30" Minimum="10" Value="14"
+                       MinimumTrackColor="#177E89" MaximumTrackColor="#084C61" ThumbColor="#177E89"
+                            ValueChanged="contactUsMsgFontSizer_ValueChanged"/>
+                    <Label x:Name="lblContactUsCharCount"
+                       Grid.Row="1" Grid.Column="0"
+                       TextColor="#DB3A34" FontSize="Small"
+                       BackgroundColor="WhiteSmoke" HorizontalOptions="StartAndExpand"
+                       VerticalOptions="Center" Padding="10,0,0,0"/>
+                    <ProgressBar x:Name="pbContactUsCharCount"
+                                 Grid.Row="1" Grid.Column="1" HorizontalOptions="Fill" Margin="0,0,10,0"
+                                 ProgressColor="#084C61" BackgroundColor="WhiteSmoke"/>
+                </Grid>
+
+
+
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Margin="10,1,1,1"
+                               VerticalOptions="Center"
+                            Text="Add more detail"/>
+                        <Switch x:Name="contactUsMoreOption" HorizontalOptions="StartAndExpand"
+                                VerticalOptions="Center" ThumbColor="#177E89"
+                                Grid.Row="0" Grid.Column="1" OnColor="#084C61"
+                                IsToggled="False" Toggled="contactUsMoreOption_Toggled"/>
+                        <StackLayout x:Name="contactUsPhoneStackLayout" Grid.Row="1"
+                                     Grid.ColumnSpan="2" IsVisible="false">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Entry x:Name="contactUsPhone"
+                                   Grid.Row="0" Grid.Column="0"
+                                   BackgroundColor="WhiteSmoke" Margin="10,1,1,1"
+                               TextColor="#000000" Keyboard="Telephone" Placeholder="Phone number..."/>
+                                <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="End"
+                                       VerticalOptions="Center" Text="Make bold"/>
+                                <CheckBox x:Name="makeBoldContactUs" Grid.Row="0"
+                                          Grid.Column="2"  Color="#177E89"
+                                          CheckedChanged="makeBoldContactUs_CheckedChanged"/>
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+
             </StackLayout>
-            <StackLayout HorizontalOptions="End" VerticalOptions="Center">
-                <Button x:Name="btnContactUs" Text="Send" FontSize="Large"
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3.5*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <SearchBar x:Name="contactUsSearchBar" MaxLength="3"
+                           Grid.Column="0" Grid.Row="0" CancelButtonColor="#DB3A34"
+                           TextColor="#000000" BackgroundColor="WhiteSmoke"
+                           HorizontalOptions="StartAndExpand" VerticalOptions="Center"
+                               SearchButtonPressed="contactUsSearchBar_SearchButtonPressed"/>
+                    <Label x:Name="lblSearchBar" TextColor="#DB3A34" BackgroundColor="WhiteSmoke"
+                           Grid.Column="0" Grid.Row="1" Margin="10,1,1,1" Padding="1" LineHeight="2"/>
+                    <Button x:Name="btnContactUs" Grid.Column="1" Grid.Row="0"
+                        Text="Send" FontSize="Large"
                         Padding="2" Margin="5,1,5,5" CornerRadius="20"
-                        BackgroundColor="#177E89" TextColor="#ffffff"/>
+                        BackgroundColor="#177E89" TextColor="#ffffff"
+                        HorizontalOptions="End" VerticalOptions="Center"/>
+                </Grid>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

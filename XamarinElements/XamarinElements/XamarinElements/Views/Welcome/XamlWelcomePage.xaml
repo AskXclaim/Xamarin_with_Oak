@@ -5,7 +5,7 @@
     x:Class="XamarinElements.Views.Welcome.XamlWelcomePage"
     Title="Lyseis...">
     <ContentPage.ToolbarItems>
-       <ToolbarItem x:Name="welcomeToolbarItem" Text="Welcome" Order="Default"
+        <ToolbarItem x:Name="welcomeToolbarItem" Text="Welcome" Order="Default"
                     IconImageSource="softwareDev_home_icon.png" Clicked="welcomeToolbarItem_Clicked"/>
         <ToolbarItem x:Name="softwareDevToolbarItem" Text="Softare Development"
                      Order="Secondary" IconImageSource="" Clicked="softwareDevToolbarItem_Clicked"/>
@@ -34,11 +34,11 @@
                         CornerRadius="50" BackgroundColor="#084C61"
                             TextColor="#ffffff" Text="Software Development"
                             Clicked="btnSoftwareDev_Clicked"/>
+                    <BoxView BackgroundColor="WhiteSmoke" HeightRequest="2"/>
                     <Button x:Name="btnCyberSecurity"
                         CornerRadius="50" BackgroundColor="#DB3A34"
                             TextColor="#ffffff" Text="Cyber Security"
                             Clicked="btnCyberSecurity_Clicked"/>
-
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" VerticalOptions="End"
