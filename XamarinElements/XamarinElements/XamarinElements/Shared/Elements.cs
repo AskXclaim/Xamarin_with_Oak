@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace XamarinElements.Shared
@@ -54,8 +55,20 @@ namespace XamarinElements.Shared
         };
 
 
+        public static DatePicker GetDatePicker(int minimumYear, string format = "dd/MM/yyyy") =>
+          new DatePicker()
+          {
+              Format = format,
+              MinimumDate = DateTime.UtcNow.AddYears(minimumYear),
+              Date = DateTime.UtcNow,
+          };
 
-
+        public static TimePicker GetTimePicker( string format = "HH:mm:ss tt") =>
+        new TimePicker()
+        {
+            Format = format,
+            Time = DateTime.UtcNow.Date.TimeOfDay,
+        };
     }
 }
 

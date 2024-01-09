@@ -22,6 +22,8 @@
     <None Remove="Views\CyberSecurity\" />
     <None Remove="Shared\" />
     <None Remove="Views\ContactUs\" />
+    <None Remove="Views\OtherServices\" />
+    <None Remove="Views\ReportFault\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -30,5 +32,7 @@
     <Folder Include="Views\CyberSecurity\" />
     <Folder Include="Shared\" />
     <Folder Include="Views\ContactUs\" />
+    <Folder Include="Views\OtherServices\" />
+    <Folder Include="Views\ReportFault\" />
   </ItemGroup>
 </Project>

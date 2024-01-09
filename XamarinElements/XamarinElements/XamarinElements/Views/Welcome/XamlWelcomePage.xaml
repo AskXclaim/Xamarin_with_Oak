@@ -12,6 +12,7 @@
         <ToolbarItem x:Name="cyberSecurityToolbarItem" Text="Cyber Security" Order="Secondary"
                      IconImageSource="cyber_security_icon.png" Clicked="cyberSecurityToolbarItem_Clicked"/>
         <ToolbarItem x:Name="contactUsToolbarItem" Text="Contact Us" Order="Secondary" Clicked="contactUsToolbarItem_Clicked"/>
+        <ToolbarItem x:Name="reportFaultToolbarItem" Text="Report Fault" Order="Secondary" Clicked="reportFaultToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <Frame CornerRadius="0" Padding="0">
@@ -30,6 +31,8 @@
                        LineHeight="1.2" Padding="10">
                         Please take a look around, we are happy to be of service.
                     </Label>
+                    <Image Source="home_page.jpg" Aspect="AspectFit"/>
+                    <Label Text="Image by Arek Socha from Pixabay" HorizontalOptions="Center"/>
                     <Button x:Name="btnSoftwareDev"
                         CornerRadius="50" BackgroundColor="#084C61"
                             TextColor="#ffffff" Text="Software Development"
@@ -39,6 +42,17 @@
                         CornerRadius="50" BackgroundColor="#DB3A34"
                             TextColor="#ffffff" Text="Cyber Security"
                             Clicked="btnCyberSecurity_Clicked"/>
+                    <StackLayout HorizontalOptions="Center">
+                        <Picker x:Name="otherServicePicker" Title="Other Services"
+                                TitleColor="#084C61"
+                                SelectedIndexChanged="otherServicePicker_SelectedIndexChanged">
+                            <Picker.Items>
+                                <x:String>Testing</x:String>
+                                <x:String>DevOps</x:String>
+                            </Picker.Items>
+                        </Picker>
+
+                    </StackLayout>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" VerticalOptions="End"

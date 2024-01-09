@@ -137,5 +137,6 @@
     <BundleResource Include="Resources\softwareDev_home_icon.png" />
     <BundleResource Include="Resources\softwareDev_chsarp_icon.png" />
     <BundleResource Include="Resources\cyber_security_icon.png" />
+    <BundleResource Include="Resources\home_page.jpg" />
   </ItemGroup>
 </Project>
