@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Registration.Views.Registration"
+             Title="Registration" IconImageSource="registraion_icon.png">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Regsiter" IconImageSource="registration_icon.png" Order="Default"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" HeightRequest="50" Padding="10"
+                       Margin="0,0,0,0"
+                       BackgroundColor="RoyalBlue" TextColor="WhiteSmoke"
+                       Text="Register" FontSize="Title" FontAttributes="Bold" />
+                <Entry x:Name="txtFirstName" Grid.Row="1" Grid.Column="0" Keyboard="Text"
+                       Placeholder="First Name" TextColor="DarkSlateGray" FontSize="Small"
+                       HorizontalOptions="Fill" VerticalOptions="Center" Margin="5" />
+                <Entry x:Name="txtLastName" Grid.Row="2" Grid.Column="0" Keyboard="Text"
+                       Placeholder="Last Name" TextColor="DarkSlateGray" FontSize="Small"
+                       HorizontalOptions="Fill" VerticalOptions="Center" Margin="5" />
+                <Entry x:Name="txtPassword" Grid.Row="3" Grid.Column="0" Keyboard="Text"
+                       Placeholder="Password" TextColor="DarkSlateGray" IsPassword="True"
+                       HorizontalOptions="Fill" VerticalOptions="Center" Margin="5" 
+                       FontSize="Small"/>
+                <Entry x:Name="txtConfirmPassword" Grid.Row="4" Grid.Column="0" Keyboard="Text"
+                       Placeholder="Confirm Password" TextColor="DarkSlateGray" IsPassword="True"
+                       HorizontalOptions="Fill" VerticalOptions="Center" Margin="5"
+                       FontSize="Small"/>
+                <DatePicker x:Name="age" Grid.Row="5" Grid.Column="0" Format="dd/MM/yyyy"
+                            TextColor="DarkSlateGray" FontSize="Small" 
+                            HorizontalOptions="Fill" VerticalOptions="Center" Margin="5" />
+                <Picker x:Name="gender" Grid.Row="6" Grid.Column="0" Title="Select Gender:"
+                        TextColor="DarkSlateGray" HorizontalOptions="Fill"
+                        VerticalOptions="Center" Margin="5" FontSize="Small">
+                    <Picker.Items>
+                        <x:String>Male</x:String>
+                        <x:String>Female</x:String>
+                        <x:String>Prefer not to say</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Entry x:Name="txtEmail" Grid.Row="7" Grid.Column="0" Keyboard="Email"
+                       Placeholder="Email" TextColor="DarkSlateGray" FontSize="Small"
+                       HorizontalOptions="Fill" VerticalOptions="Center" Margin="5" />
+                <Entry x:Name="txtPhone" Grid.Row="8" Grid.Column="0" Keyboard="Telephone"
+                       Placeholder="Phone Number" TextColor="DarkSlateGray" FontSize="Small"
+                       HorizontalOptions="Fill" VerticalOptions="Center" Margin="5" />
+                
+                <StackLayout Grid.Row="9" Grid.Column="0" Orientation="Horizontal" Margin="5">
+                    <CheckBox  Color="DodgerBlue" Margin="0,0,10,0" VerticalOptions="Center"/>
+                    <Label VerticalOptions="Center">I agree to the terms &amp; conditions</Label>
+                </StackLayout>
+                <Button Grid.Row="10" Grid.Column="0" Text="Register!" BackgroundColor="CornflowerBlue"
+                        TextColor="GhostWhite" CornerRadius="20" Margin="5"/>
+            </Grid>
+            <Label HorizontalOptions="Center" VerticalOptions="EndAndExpand" Margin="5">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Rename icons created by Mihimihi - Flaticon"
+                              TextColor="Blue" TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
