@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LoginApp"
+             x:Class="LoginApp.loginApp" LayoutChanged="LoginApp_OnLayoutChanged">
+
+    <Grid x:Name="loginGrid" Padding="50,25" RowSpacing="0" ColumnSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="0" />
+        </Grid.ColumnDefinitions>
+        <StackLayout x:Name="headerSection" Grid.Row="0" Grid.Column="0" Spacing="20" Margin="0,0,0,10">
+            <Label x:Name="welcome" Style="{StaticResource GlobalAppLabelStyleHeader}"
+                   Text="Welcome to Lyseis..." />
+            <BoxView x:Name="welcomeUnderLine" HeightRequest="2" BackgroundColor="#BE222222"
+                     VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="100" />
+            <Image Source="lysies_icon.png" Aspect="AspectFit"
+                   HeightRequest="150" WidthRequest="150" />
+        </StackLayout>
+        <StackLayout x:Name="footerSection" Grid.Row="1" Grid.Column="0">
+            <Entry x:Name="userName" Placeholder="Username" Margin="5"
+                   VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Entry x:Name="password" Placeholder="Password"
+                   Keyboard="Text" IsPassword="True" Margin="5"
+                   VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            <Button Text="Login" BackgroundColor="CornflowerBlue"
+                    TextColor="White" CornerRadius="20" />
+            <StackLayout Margin="5" Orientation="Horizontal"
+                         VerticalOptions="CenterAndExpand">
+                <CheckBox x:Name="rememberMe" Color="CornflowerBlue" VerticalOptions="Center" />
+                <Label Text="Remember me!" VerticalOptions="Center" />
+            </StackLayout>
+            <Label Style="{StaticResource GlobalAppLabelStyleFooter}"
+                   VerticalOptions="EndAndExpand" HorizontalOptions="Center" Margin="1,1,1,20">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Not a member? " Style="{StaticResource GlobalAppSpanStyle}" />
+                        <Span Text="Sign up now" Style="{StaticResource GlobalAppSpanStyle}"
+                              TextDecorations="Underline" FontAttributes="Italic" TextColor="Blue">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer>
+
+                                </TapGestureRecognizer>
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </Grid>
+</ContentPage>

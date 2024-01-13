@@ -3,9 +3,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Registration.Views.Registration"
-             Title="Registration" IconImageSource="registraion_icon.png">
+             Title="Registration" IconImageSource="registration_icon.png">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Regsiter" IconImageSource="registration_icon.png" Order="Default"/>
+        <ToolbarItem Text="Register" IconImageSource="registration_icon.png" Order="Default"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
@@ -68,13 +68,15 @@
                 <Button Grid.Row="10" Grid.Column="0" Text="Register!" BackgroundColor="CornflowerBlue"
                         TextColor="GhostWhite" CornerRadius="20" Margin="5"/>
             </Grid>
+            <!-- TODO: Get link clickable -->
             <Label HorizontalOptions="Center" VerticalOptions="EndAndExpand" Margin="5">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="Rename icons created by Mihimihi - Flaticon"
                               TextColor="Blue" TextDecorations="Underline">
                             <Span.GestureRecognizers>
-                                <TapGestureRecognizer />
+                                <TapGestureRecognizer Command="{Binding ClickCommand}"
+                                                      CommandParameter="https://www.google.com/"/>
                             </Span.GestureRecognizers>
                         </Span>
                     </FormattedString>

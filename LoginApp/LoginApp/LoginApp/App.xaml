@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginApp.App">
+    <Application.Resources>
+        <Color x:Key="FontTextColor">DarkGray</Color>
+        <Style x:Key="GlobalAppLabelStyleHeader" TargetType="Label" ApplyToDerivedTypes="True">
+            <!-- <Setter Property="Margin" Value="10,1,1,10"/> -->
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="CharacterSpacing" Value="1.2" />
+            <!-- <Setter Property="VerticalOptions" Value="EndAndExpand" /> -->
+            <Setter Property="HorizontalOptions" Value="Center" />
+        </Style>
+        <Style x:Key="GlobalAppLabelStyleFooter" TargetType="Label" ApplyToDerivedTypes="True">
+            <Setter Property="TextColor" Value="#BE222222" />
+            <Setter Property="FontSize" Value="Small" />
+            <Setter Property="CharacterSpacing" Value="1.2" />
+            <Setter Property="VerticalOptions" Value="EndAndExpand" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+        </Style>
+        <Style x:Key="GlobalAppSpanStyle" TargetType="Span" ApplyToDerivedTypes="True">
+            <Setter Property="FontSize" Value="Small" />
+            <Setter Property="TextColor" Value="#BE222222" />
+            <Setter Property="CharacterSpacing" Value="1.2" />
+        </Style>
+    </Application.Resources>
+</Application>
